@@ -30,7 +30,8 @@
 		}
 
         public Devise(int id, string? nomDevise, double taux)
-        {
+	//test
+		{
             Taux = taux;
             NomDevise = nomDevise;
             Id = id;
