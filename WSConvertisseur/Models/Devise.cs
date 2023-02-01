@@ -1,4 +1,5 @@
-﻿namespace WSConvertisseur.Models
+﻿using System.ComponentModel.DataAnnotations;
+namespace WSConvertisseur.Models
 {
     public class Devise
     {
@@ -6,20 +7,22 @@
 		private string? nomDevise;
 		private double taux;
 
+		[Required]
 		public double Taux
 		{
 			get { return taux; }
 			set { taux = value; }
 		}
 
-		public string? NomDevise
+        [Required]
+        public string? NomDevise
 		{
 			get { return nomDevise; }
 			set { nomDevise = value; }
 		}
 
-
-		public int Id
+        [Required]
+        public int Id
 		{
 			get { return id; }
 			set { id = value; }
@@ -30,7 +33,6 @@
 		}
 
         public Devise(int id, string? nomDevise, double taux)
-	//test
 		{
             Taux = taux;
             NomDevise = nomDevise;
